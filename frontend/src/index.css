@@ -1,0 +1,239 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, red, blue);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0%, 100% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 100%;
+  }
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  background-color: #fff;
+  padding: 32px 48px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmNGY0ZjQiIHN0cm9rZS13aWR0aD0iMC4xIj4gPHBhdGggZD0iTSAwIDAgTCAxMDAgMCAiIC8+IDxwYXRoIGQ9Ik0gMCAxMCBMIDEwMCAxMCAiIC8+IDxwYXRoIGQ9Ik0gMCAyMCBMIDEwMCAyMCAiIC8+IDxwYXRoIGQ9Ik0gMCAzMCBMIDEwMCAzMCAiIC8+IDxwYXRoIGQ9Ik0gMCA0MCBMIDEwMCA0MCAiIC8+IDxwYXRoIGQ9Ik0gMCA1MCBMIDEwMCA1MCAiIC8+IDxwYXRoIGQ9Ik0gMCA2MCBMIDEwMCA2MCAiIC8+IDxwYXRoIGQ9Ik0gMCA3MCBMIDEwMCA3MCAiIC8+IDxwYXRoIGQ9Ik0gMCA4MCBMIDEwMCA4MCAiIC8+IDxwYXRoIGQ9Ik0gMCA5MCBMIDEwMCA5MCAiIC8+IDxwYXRoIGQ9Ik0gMCAxMDAgTCAxMDAgMTAwIiAvPiA8L3N2Zz4=') repeat;
+  opacity: 0.1;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.container h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.container p {
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.social-button {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 32%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.social-button i {
+  margin-right: 8px;
+}
+
+.social-button.apple {
+  color: #000;
+}
+
+.social-button.google {
+  color: #db4437;
+}
+
+.social-button.twitter {
+  color: #1da1f2;
+}
+
+.social-button:hover {
+  background: #f0f0f0;
+}
+
+.or {
+  margin: 20px 0;
+  color: #777;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.container input {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.container input:focus {
+  border-color: #666;
+  box-shadow: 0 0 5px rgba(102, 102, 102, 0.5);
+}
+
+.container input::placeholder {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.glow-on-hover{
+  width: 303px;
+  height: 40px;
+  border:none;
+  outline:none;
+  color:#fff;
+  background:#111;
+  cursor:pointer;
+  position:relative;
+  z-index:0;
+  border-radius: 10px;
+}
+.glow-on-hover:before{
+  content: '';
+  background: linear-gradient(45deg,#ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation:glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+.glow-on-hover:active{
+  color: #000;
+}
+.glow-on-hover:active:after{
+  background: transparent;
+}
+.glow-on-hover:hover:before{
+  opacity: 1;
+}
+
+.glow-on-hover:after{
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:#111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+@keyframes glowing{
+  0%{background-position: 0 0;}
+  50%{background-position: 400% 0;}
+  100%{background-position: 0 0;}
+}
+
+.signup-link {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: purple;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.text_login{
+  color: #000;
+  font-size: 25px;
+  font-weight: 800;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-bottom: 10px;
+}

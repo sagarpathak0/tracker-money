@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b3138;
+  color: #ff4c4c;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #2a2f50;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+header {
+  text-align: center;
+}
+
+.home_user{
+  margin: 0;
+  font-size: 2rem;
+  color: #fff;
+  z-index: 999;
+  padding-top:50px;
+  padding-bottom: 5px;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #0ef;
+}
+
+header h2 span {
+  font-size: 1.2rem;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+main {
+  margin-top: 30px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+form input {
+  width: 100%;
+  background-color: #333;
+  color: #ddd;
+  border: 2px solid #4c8bff;
+  padding: 10px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+form input[type="datetime-local"] {
+  color: #888;
+}
+
+form div.basic {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form button {
+  width: 100%;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 7px;
+  padding: 10px;
+  background-color: #ff4c4c;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #ff1a1a;
+}
+
+div.transactions {
+  margin-top: 20px;
+  background-color: #28315c;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+div.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid #4c8bff;
+}
+
+div.transaction:first-child {
+  border-top: 0;
+}
+
+div.transaction div.name {
+  font-size: 1.2rem;
+  color: #4c8bff;
+}
+
+div.transaction div.description {
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+div.right {
+  text-align: right;
+}
+
+div.price.green {
+  color: #00ff00;
+}
+
+div.price.red {
+  color: #ff0000;
+}
+
+div.transaction div.datetime {
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: #ff4c4c;
+  transition: color 0.3s ease;
+}
+
+.delete-icon:hover {
+  color: #ff1a1a;
+}
+
+button.glow-on-hover {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #ff4c4c;
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.glow-on-hover:hover {
+  background-color: #ff1a1a;
+  box-shadow: 0 0 10px #ff1a1a, 0 0 20px #ff4c4c, 0 0 30px #ff4c4c;
+}
