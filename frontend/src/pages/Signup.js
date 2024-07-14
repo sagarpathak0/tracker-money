@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { handleError, handleSuccess } from "../utils";
+import 'font-awesome/css/font-awesome.min.css';
 
 function Signup() {
   const [signupInfo, setSignupInfo] = useState({
@@ -26,7 +27,7 @@ function Signup() {
       return handleError("Name, email, and password are required");
     }
     try {
-      const url = "https://tracker-money-api.vercel.app/auth/signup";
+      const url = "http://localhost:8080/auth/signup";
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -59,9 +60,9 @@ function Signup() {
         <h2>Welcome</h2>
         <p>Please enter your details to sign up.</p>
         <div className="social-login">
-          <button className="social-button apple">Apple</button>
-          <button className="social-button google">Google</button>
-          <button className="social-button twitter">Twitter</button>
+          <button className="social-button apple"><i className="fa fa-apple"></i> Apple</button>
+          <button className="social-button google"><i className="fa fa-google"></i> Google</button>
+          <button className="social-button twitter"><i className="fa fa-twitter"></i> Twitter</button>
         </div>
         <p className="or">OR</p>
         <form onSubmit={handleSignup}>
