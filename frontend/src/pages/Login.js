@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { useState } from "react";
 import { handleError, handleSuccess } from "../utils";
-import 'font-awesome/css/font-awesome.min.css';
 
 function Login() {
   const [loginInfo, setLoginInfo] = useState({
@@ -63,9 +62,9 @@ function Login() {
         <h2>Welcome back</h2>
         <p>Please enter your details to sign in.</p>
         <div className="social-login">
-          <button className="social-button apple"><i className="fa fa-apple"></i> Apple</button>
-          <button className="social-button google"><i className="fa fa-google"></i> Google</button>
-          <button className="social-button twitter"><i className="fa fa-twitter"></i> Twitter</button>
+          <button className="social-button apple">Apple</button>
+          <button className="social-button google">Google</button>
+          <button className="social-button twitter">Twitter</button>
         </div>
         <p className="or">OR</p>
         <form onSubmit={handleLogin}>
