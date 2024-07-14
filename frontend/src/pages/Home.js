@@ -25,7 +25,7 @@ function Home() {
   }, []);
 
   async function deleteTransaction(id) {
-    const url = `http://localhost:8080/transactions/${id}`;
+    const url = `https://tracker-money-api.vercel.app/transactions/${id}`;
     const response = await fetch(url, {
       method: "DELETE",
       headers: { "Content-type": "application/json" },
