@@ -25,7 +25,7 @@ function Home() {
   }, []);
 
   async function deleteTransaction(id) {
-    const url = `http://localhost:8080/transactions/${id}`;
+    const url = `https://tracker-money-api.vercel.app/transactions/${id}`;
     const response = await fetch(url, {
       method: "DELETE",
       headers: { "Content-type": "application/json" },
@@ -38,7 +38,7 @@ function Home() {
   }
 
   async function getTransactions() {
-    const url = `http://localhost:8080/transactions/${localStorage.getItem("user")}`;
+    const url = `https://tracker-money-api.vercel.app/transactions/${localStorage.getItem("user")}`;
     const response = await fetch(url);
     const json = await response.json();
     return json;
@@ -49,7 +49,7 @@ function Home() {
     if (!name || !description || !datetime) {
       handleError("Please fill in all the fields.");
     } else {
-      const url = "http://localhost:8080/transaction";
+      const url = "https://tracker-money-api.vercel.app/transaction";
       const price = name.split(" ")[0];
       fetch(url, {
         method: "POST",
