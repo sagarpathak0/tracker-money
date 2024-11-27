@@ -11,7 +11,15 @@ require('./models/db');
 const PORT = process.env.PORT || 8080 ;
 
 app.use(bodyParser.json());
-app.use(cors());
+onst allowedOrigins = ['https://tracker-money-ui.vercel.app'];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true, 
+  })
+);
 app.use('/auth',AuthRouter)
 
 app.delete("/transactions/:id", async(req,res) =>{
