@@ -11,7 +11,7 @@ require('./models/db');
 const PORT = process.env.PORT || 8080 ;
 
 app.use(bodyParser.json());
-onst allowedOrigins = ['https://tracker-money-ui.vercel.app'];
+const allowedOrigins = ['https://tracker-money-ui.vercel.app'];
 
 app.use(
   cors({
