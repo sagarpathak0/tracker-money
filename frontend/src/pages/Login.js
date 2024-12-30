@@ -27,7 +27,7 @@ function Login() {
       return handleError("Email and password are required");
     }
     try {
-      const url = "https://tracker-money-api.vercel.app/auth/Login";
+      const url = "http://localhost:8080/auth/Login";
       const response = await fetch(url, {
         method: "POST",
         headers: {
