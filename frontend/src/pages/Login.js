@@ -34,7 +34,6 @@ function Login() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(loginInfo),
-        credentials: 'include',
       });
       const result = await response.json();
       const { success, message, jwtToken, name, error } = result;
