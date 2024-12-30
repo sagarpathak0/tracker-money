@@ -11,19 +11,13 @@ require('./models/db');
 const PORT = process.env.PORT || 8080 ;
 
 app.use(bodyParser.json());
-const allowedOrigins = ['https://tracker-money-ui.vercel.app'];
+//const allowedOrigins = ['https://tracker-money-ui.vercel.app'];
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    },
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true,
+    credentials: false,
   })
 );
 app.use('/auth',AuthRouter)
